@@ -1,0 +1,15 @@
+name: dogecloud-oss-upload
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+      - uses: xdogrun/dogecloud-oss-upload@v1.0
+        with:
+          accessKey: "64123fdcb17a70f9"
+          secretKey: "51deeb8672c2d2725f356b2e706d4cce"
+          directoryPath: "public"
+          bucket: "test"
